@@ -1,1 +1,1 @@
-# personal-resume
+# personal-portfolio
