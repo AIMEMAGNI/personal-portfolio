@@ -17,8 +17,11 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
 }
 
 section {
@@ -63,11 +66,3 @@ ul li {
     height: auto;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8f8f8; /* Set the desired background color */
-    padding: 10px 0;
-    text-align: center;
-}
