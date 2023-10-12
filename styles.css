@@ -63,6 +63,11 @@ ul li {
     height: auto;
 }
 
-
-
-/* Add more CSS styles for responsiveness and customization */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f8f8; /* Set the desired background color */
+    padding: 10px 0;
+    text-align: center;
+}
