@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#background">Background</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" style="text-align: center;">
+        <img src="IMG-20210924-WA0097.jpg" alt="Your Picture" id="profile-picture">
+        <h4 style="font-size: 2em; font-family: 'Arial', sans-serif;">Aime Magnifique NDAYISHIMIYE</h4>
+        <p style="font-style: italic; font-size: 1.2em;">ML intern at SevenX</p>
+    </section>
+
+
+    <section id="background">
+        <h2>Background</h2>
+        <p>Write about your background and interests here.</p>
+        <p>
+            I am a passionate software engineering student and a Machine Learning intern based in Kigali, Rwanda.
+            Currently, I am pursuing my studies at ALU while gaining hands-on experience in the field of Machine
+            Learning.
+        </p>
+        <p>
+            My journey in technology began at LEAPR Labs, where I served as an Artificial Intelligence Fellow. During
+            this time, I delved into Data Science, Machine Learning, and Deep Learning, gaining expertise in these
+            cutting-edge technologies.
+        </p>
+        <p>
+            Building on this foundation, I embarked on an internship at Rwanda Utilities Regulatory Authority (RURA),
+            further deepening my knowledge in the realm of Data Science. Here, I focused on Unsupervised Learning,
+            honing my skills in data analysis and pattern recognition.
+        </p>
+        <p>
+            Additionally, I had the privilege of being a trainee at Huzalabs, where I worked on NLP projects,
+            specializing in Sentiment Analysis and Text Summarization. This opportunity allowed me to refine my skills
+            in natural language processing, a critical area in modern AI applications.
+        </p>
+        <p>
+            Balancing my academic pursuits with real-world applications has been a rewarding journey. I am excited to
+            continue expanding my knowledge and skills in Machine Learning and software engineering, with a focus on
+            driving innovation and positive impact in the tech industry.
+        </p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="job">
+            <h3>Machine Learning Intern</h3>
+            <p>SevenX, Kigali City, Rwanda</p>
+            <p>Aug 2023 - Present (3 mos)</p>
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Collaborated on the development and implementation of machine learning models.</li>
+                <li>Conducted research on cutting-edge ML techniques and algorithms.</li>
+                <!-- Add more responsibilities -->
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Data Science Intern</h3>
+            <p>Rwanda Utilities Regulatory Authority (RURA), Rwanda</p>
+            <p>Jun 2022 - Aug 2022 (3 mos)</p>
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Conducted exploratory data analysis to identify trends and patterns.</li>
+                <li>Applied unsupervised learning techniques for data clustering.</li>
+                <!-- Add more responsibilities -->
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Artificial Intelligence Fellow</h3>
+            <p>LEAPR Labs, Kigali City, Rwanda</p>
+            <p>Jan 2022 - May 2022 (5 mos)</p>
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Conducted research on various aspects of artificial intelligence.</li>
+                <li>Developed and deployed machine learning models for real-world applications.</li>
+                <!-- Add more responsibilities -->
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>NLP Trainee</h3>
+            <p>Huzalabs</p>
+            <p>Nov 2021 - Dec 2021 (2 mos)</p>
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Assisted in the development and training of Natural Language Processing (NLP) models.</li>
+                <li>Conducted experiments for sentiment analysis and text summarization.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Position Title</h3>
+            <p>Company Name, Location</p>
+            <p>Start Date - End Date (Duration)</p>
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Responsibility 1</li>
+                <li>Responsibility 2</li>
+                <!-- Add more responsibilities -->
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="slider">
+            <div class="slide">
+                <img src="Screenshot 2023-10-11 201236.jpg" alt="Project 1">
+            </div>
+            <div class="slide">
+                <img src="Screenshot 2023-10-11 201318.jpg" alt="Project 2">
+            </div>
+            <div class="slide">
+                <img src="Screenshot.jpg" alt="Project 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </section>
+
+    <footer>
+        <p>Contact: a.ndayishim@alustudent.com</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth scroll navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Image slider
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n >= slides.length) currentSlide = 0;
+            if (n < 0) currentSlide = slides.length - 1;
+
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[currentSlide].style.display = 'block';
+        }
+
+        function nextSlide() {
+            showSlide(++currentSlide);
+        }
+
+        function prevSlide() {
+            showSlide(--currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+
+</body>
+
+</html>

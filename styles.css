@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+section {
+    padding: 2rem;
+}
+
+.job {
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Add this to your styles.css file */
+
+#profile-picture {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    /* Adjust the height as needed */
+}
+
+/* Add this to your styles.css file */
+
+.slider {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* Hide overflow if images are larger */
+}
+
+/* Add this to your styles.css file */
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Add more CSS styles for responsiveness and customization */
